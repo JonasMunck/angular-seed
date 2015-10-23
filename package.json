@@ -20,14 +20,14 @@
   "scripts": {
     "postinstall": "bower install",
 
-    "prestart": "npm install",
+    "prestart": "npm install --no-bin-links",
     "start": "http-server -a localhost -p 8000 -c-1",
 
-    "pretest": "npm install",
-    "test": "karma start karma.conf.js",
+    "pretest": "npm install --no-bin-links",
+    "test": "karma start karma.conf.js --single-run",
     "test-single-run": "karma start karma.conf.js  --single-run",
 
-    "preupdate-webdriver": "npm install",
+    "preupdate-webdriver": "npm install --no-bin-links",
     "update-webdriver": "webdriver-manager update",
 
     "preprotractor": "npm run update-webdriver",
